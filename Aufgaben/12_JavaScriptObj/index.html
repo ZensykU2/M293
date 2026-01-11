@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline JavaScript Example</title>
+</head>
+
+<body>
+
+    <script>
+        class Car {
+            constructor(marke, modell, jahrgang, kilometerstand = 0) {
+                this.marke = marke;
+                this.modell = modell;
+                this.jahrgang = jahrgang;
+                this.kilometerstand = kilometerstand;
+            }
+
+            setKilometerstand(kilometerstand) {
+                this.kilometerstand = kilometerstand;
+            }
+
+            detailsAnzeigen() {
+                return this.marke + " " + this.modell + " Jahrgang " + this.jahrgang + " mit " + this.kilometerstand + " Kilometern";
+            }
+        }
+
+        console.log("--- Einzeltest Car-Objekt ---");
+        let car1 = new Car("VW", "Golf 8", 2022);
+        car1.setKilometerstand(14755);
+        console.log(car1.detailsAnzeigen());
+
+
+        const Autolager = {
+            autos: [],
+
+            hinzufuegen: function (obj) {
+                this.autos.push(obj);
+            },
+
+            auflisten: function () {
+                this.autos.forEach(function (auto) {
+                    console.log(auto.detailsAnzeigen());
+                });
+            }
+        };
+
+        console.log("--- Autolager Test ---");
+        let car2 = new Car("Tesla", "Model 3", 2023);
+        car2.setKilometerstand(5000);
+
+        let car3 = new Car("Ford", "Mustang", 1967);
+        car3.setKilometerstand(125000);
+
+        let car4 = new Car("BMW", "M3", 2022);
+        car4.setKilometerstand(15000);
+
+        Autolager.hinzufuegen(car1);
+        Autolager.hinzufuegen(car2);
+        Autolager.hinzufuegen(car3);
+        Autolager.hinzufuegen(car4);
+
+        Autolager.auflisten();
+    </script>
+
+    <h1>Inline JavaScript Vorlage</h1>
+    <p>Das ist eine einfache Vorlage für Inline-JavaScript.</p>
+    <p>Damit du die Ausgabe der Konsole einsehen kannst, öffne die Entwicklertools,
+        indem du mit der rechten Maustaste auf diese Seite klickst, und dann auf Untersuchen klickst.</p>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+h1 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+div {
+    background-color: rgb(222, 209, 235);
+    padding: 2em;
+    margin: 20px;
+}
+
+.deep {
+    font-size: 2em;
+}
+
+.deeper {
+    font-size: 0.5rem;
+}

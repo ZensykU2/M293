@@ -1,0 +1,59 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* GEÄNDERT: min-height statt height für bessere Flexibilität */
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  background: lightblue;
+  padding: 10px;
+  text-align: center;
+}
+
+nav, main, aside {
+  background: #eee;
+  padding: 10px;
+}
+
+/* GEÄNDERT: Selektor von section zu .content
+   NEU: gap für gleichmäßige Abstände zwischen Spalten
+   ENTFERNT: justify-items (existiert nicht bei Flexbox) */
+.content {
+  display: flex;
+  flex: 1; /* Nimmt verbleibenden Platz zwischen Header und Footer ein */
+  gap: 10px; /* Abstand zwischen den Spalten */
+  padding: 10px;
+}
+
+/* GEÄNDERT: Breite von 30px auf 20% erhöht */
+nav {
+  flex: 0 0 20%;
+}
+
+/* GEÄNDERT: flex: none zu flex: 1 - Main nimmt verbleibenden Platz ein */
+main {
+  flex: 1;
+}
+
+/* NEU: Sidebar bekommt feste Breite von 20% */
+aside {
+  flex: 0 0 20%;
+}
+
+/* GEÄNDERT: position absolute entfernt
+   Footer bleibt im normalen Dokumentenfluss */
+footer {
+  /* position: absolute; ENTFERNT */
+  /* bottom: 0; ENTFERNT */
+  /* width: 100%; ENTFERNT */
+  background: lightgray;
+  padding: 10px;
+  text-align: center;
+}

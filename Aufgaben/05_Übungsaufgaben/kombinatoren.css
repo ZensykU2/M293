@@ -1,0 +1,15 @@
+.container p {
+    color: blue;
+}
+
+.container > p {
+    font-weight: bold;
+}
+
+.first ~ p {
+    color: green;
+}
+
+.first + p {
+    color: red;
+}

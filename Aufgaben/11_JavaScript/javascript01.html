@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline JavaScript Example</title>
+</head>
+
+<body>
+
+    <script>
+
+        let eingabe;
+        eingabe = prompt("Bitte gib die Erste Zahl ein", "0");
+        let zahl1 = Number(eingabe);
+        eingabe = prompt("Bitte gib die Zweite Zahl ein", "0");
+        let zahl2 = Number(eingabe);
+        console.log(zahl1, zahl2);
+
+        function add(zahl1, zahl2) {
+            let summeAdd = zahl1 + zahl2;
+            return summeAdd;
+        }
+
+        function subtract(zahl1, zahl2) {
+            let summeSub = zahl1 - zahl2;
+            return summeSub;
+        }
+
+        function multiply(zahl1, zahl2) {
+            let summeMul = zahl1 * zahl2;
+            return summeMul;
+        }
+
+        function divide(zahl1, zahl2) {
+            if (zahl2 == 0) {
+                return "Fehler: Division durch 0 nicht möglich!";
+            }
+            else {
+                let summeDiv = zahl1 / zahl2;
+                return summeDiv;
+            }
+        }
+
+        console.log("Addition: " + add(zahl1, zahl2));
+        console.log("Subtraktion: " + subtract(zahl1, zahl2));
+        console.log("Multiplikation: " + multiply(zahl1, zahl2));
+        console.log("Division: " + divide(zahl1, zahl2));
+
+    </script>
+
+    <h1>Inline JavaScript Vorlage</h1>
+    <p>Das ist eine einfache Vorlage für Inline-JavaScript.</p>
+    <p>Damit du die Ausgabe der Konsole einsehen kannst, öffne die Entwicklertools,
+        indem du mit der rechten Maustaste auf diese Seite klickst, und dann auf Untersuchen klickst.</p>
+</body>
+
+</html>

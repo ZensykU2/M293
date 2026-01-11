@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let row = parseInt(prompt("Welche Zahlenreihe möchtest du (z. B. 5 für 5er Reihe)?"));
+        let length = parseInt(prompt("Wie viele Werte sollen ausgegeben werden?"));
+
+        if (row <= 0 || length <= 0) {
+            console.log("Bitte gültige positive Zahlen eingeben!");
+        } else {
+            let values = [];
+            for (let i = 1; i <= length; i++) {
+                values.push(row * i);
+            }
+
+            console.log(values.join(", "));
+        }
+
+    </script>
+
+</body>
+
+</html>
